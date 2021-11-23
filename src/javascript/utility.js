@@ -4,9 +4,13 @@ var api = {
 };
 
 var urls = {
-    dict : "http://fanyi.youdao.com/openapi.do?keyfrom=" + api.keyfrom +"&key="+ api.key +"&type=data&doctype=json&version=1.1&q=",
+    // dict : "http://fanyi.youdao.com/openapi.do?keyfrom=" + api.keyfrom +"&key="+ api.key +"&type=data&doctype=json&version=1.1&q=",
+    dict:"http://localhost:8089/word/query?keyfrom="+api.keyfrom +"&key="+ api.key +"&type=data&doctype=json&version=1.1&q=",
+ //
     voice : "http://dict.youdao.com/dictvoice?audio=",
-    dictHttps : "https://fanyi.youdao.com/openapi.do?keyfrom=" + api.keyfrom +"&key="+ api.key +"&type=data&doctype=json&version=1.1&q=",
+    // dictHttps : "https://fanyi.youdao.com/openapi.do?keyfrom=" + api.keyfrom +"&key="+ api.key +"&type=data&doctype=json&version=1.1&q=",
+    //test
+    dictHttps : "https://localhost:8089/word/query?keyfrom="+api.keyfrom +"&key="+ api.key +"&type=data&doctype=json&version=1.1&q=",
     voiceHttps : "https://dict.youdao.com/dictvoice?audio=",
 };
 
