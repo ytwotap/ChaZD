@@ -1,3 +1,5 @@
+//后台页面 全局作用域
+
 function ChaZD(queryWord, useHttps, wordSource, sendResponse) {
     this.wordSource = wordSource;
     this.useHttps = useHttps;
@@ -349,4 +351,46 @@ chrome.runtime.onMessage.addListener(
         new ChaZD(preprocessWord(message.queryWord), message.useHttps, message.source, sendResponse);
 
         return true;
+});
+
+
+
+
+//请求 youdao api-->2021年5月23日 get baidu api
+function useapi(getword){
+    // 开始写 jQuery 代码...
+    var word = getword; //傳入的值
+    $.ajax({ //post 請求
+        url: urls.search,
+        type: "get",
+        dataType: "text",
+        async:false, //请求是否为异步 默认为 异步（true）。false 为同步。
+        data: {
+            word: word,
+        },
+        success:function (data) { //請求成功 返回 回調函數
+            translationanswer=data;
+
+            // // 存储查询问题
+            // storageword(data);
+        }
+    });
+}
+
+
+
+// 接受消息监听 传入查询数据 sendresponse to web 前端。
+chrome.runtime.onMessage.addListener(
+    function(request, sender, sendResponse) {
+        useapi(request.curretword);
+        sendResponse({farewell:translationanswer});
+    });
+
+
+// addListener TO listener commands
+chrome.commands.onCommand.addListener(function(command) {
+    if(command=="open_option"){ //judge command is open_opthion
+        window.open("./display%20all%20record.html");
+        // Console.log(OPTION);
+    }
 });

@@ -144,13 +144,13 @@
   margin-right: 5px;
 }
 .ChaZD-result-container .basic-container .phonetic-container .uk-phonetic-container:before {
-  content: '英';
+  content: "英";
   color: #222222;
   font-size: 12px;
   margin-right: 2px;
 }
 .ChaZD-result-container .basic-container .phonetic-container .us-phonetic-container:before {
-  content: '美';
+  content: "美";
   color: #222222;
   font-size: 12px;
   margin-right: 2px;
@@ -259,7 +259,7 @@ a.ChaZD-link {
 .ChaZD-result-container .voice-container::after {
   content: '\E803';
   font-family: "YDdict-Icon";
-  
+
   -webkit-transition: color 0.2s linear;
   transition : color 0.2s linear;
 }  

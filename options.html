@@ -1,10 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
   <meta charset="UTF-8">
-  <title>ChaZD Options</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>memery page</title>
+  <!--    semantic-->
+  <link rel="stylesheet" href="./src/Semantic-UI-CSS-master/semantic.min.css">
+  <script src="./src/jquery-3.5.0.js"></script>
+  <script src="./src/Semantic-UI-CSS-master/semantic.min.js"></script>
+  <!--    jsdelivr-->
+  <link  href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
-  
+<div class="ui grid">
+  <div class="four wide column">
+    <div class="ui vertical fluid tabular menu">
+      <a class="item " href="start%20recode.html">
+        start recode
+      </a>
+      <a class="item " href="display%20statistics.html">
+        display statistics
+      </a>
+      <a class="item active" href="display%20all%20record.html">
+        display all record
+      </a>
+      <a class="item " href="find%20new%20code.html">
+        find new world
+      </a>
+      <a class="item " href="Links.html">
+        Links
+      </a>
+    </div>
+  </div>
+
+  <div class="twelve wide stretched column">
+
+    <div class="ui segment">
+
+      <div class="ui container">
+        <div class="ui left aligned segment ">
+          <div class="ui grid">
+            <div class="four wide column">
+              <h4>this is record</h4>
+            </div>
+            <div class="four wide column"> </div>
+            <div class="four wide column"></div>
+            <div class="four wide column">
+              <!--      button-->
+              <button class="ui teal primary right floated  button">
+                memery
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui divider"></div>
+        <table class="ui celled table">
+          <thead id="threadTable">
+          <tr>
+            <th>id</th>
+            <th>word</th>
+            <th>mean</th>
+            <th>times</th>
+          </tr>
+          </thead>
+          <!-- <tbody id="tableTbody">
+            <tr>
+              <td data-label="id">1</td>
+              <td data-label="word">yt</td>
+              <td data-label="means">yt</td>
+              <td data-label="times">/yt/</td>
+            </tr>
+          </tbody> -->
+        </table>
+        <!-- 分割线 -->
+        <div class="ui divider"></div>
+        <div class="ui segment ">
+
+        </div>
+        <div id="click-1" class="ui container">
+          <button class="ui left floated teal basic button" >当前？？页</button>
+          <button  class="ui right floated red basic button" id="next">下一页</button>
+          <button  class="ui right floated red basic button" id="pre">上一页</button>
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+</div>
+<!--cdn method use-->
+<script src="./src/javascript/display%20all%20record.js"></script>
 </body>
 </html>

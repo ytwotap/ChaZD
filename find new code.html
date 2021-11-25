@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>memery page</title>
+    <!--    semantic-->
+    <link rel="stylesheet" href="./src/Semantic-UI-CSS-master/semantic.min.css">
+    <script src="./src/javascript/jquery-3.5.0.js"></script>
+    <script src="./src/Semantic-UI-CSS-master/semantic.min.js"></script>
+    <!--    jsdelivr-->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<div class="ui grid">
+    <div class="four wide column">
+        <div class="ui vertical fluid tabular menu">
+            <a class="item " href="start%20recode.html">
+                start recode
+            </a>
+            <a class="item " href="display%20statistics.html">
+
+                display statistics
+            </a>
+            <a class="item" href="display%20all%20record.html">
+                display all record
+            </a>
+            <a class="item active" href="find%20new%20code.html">
+                find new world
+            </a>
+            <a class="item " href="Links.html">
+                Links
+            </a>
+        </div>
+    </div>
+
+    <div class="twelve wide stretched column">
+
+        <div class="ui segment">
+            <!--            table-->
+            <div class="ui center aligned basic segment">
+
+                <div class="ui left  icon action input">
+                    <input id="inputworld" type="text" placeholder="translet" autofocus>
+                    <div id="buttontranslet" class="ui blue submit button">翻译</div>
+                </div>
+                <div class="ui center aligned basic segment">
+                    <p id="translationText"></p>
+                    <div id="line"></div>
+                </div>
+                <div id="answercontainer" class="ui center aligned basic segment">
+                    <p id="newanswer"></p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!--cdn method use-->
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"/>
+<script src="./src/Semantic-UI-CSS-master/semantic.min.js"></script>
+<script src="./src/javascript/popup.js"></script>
+<!--find word-->
+</body>
+</html>

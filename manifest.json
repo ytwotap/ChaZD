@@ -13,20 +13,32 @@
     "contextMenus",
     "tabs",
     "storage",
-    "notifications"
+    "notifications",
+
+
+    "<all_urls>",
+    "declarativeContent",
+    "http://localhost:8080/demo/all",
+    "http://localhost:8080/demo/add",
+    "http://localhost:8083/getAWord",
+    "https://cdn.jsdelivr.net/npm/vue@2.6.12",
+    "https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css",
+    "https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"
   ],
 
   "options_page": "options.html",
 
   "background": {
       "persistent": true,
-      "scripts": [ "public/js/utility.min.js", "public/js/background.min.js" ]
+      "scripts": [ "public/js/utility.min.js",
+        "public/js/background.min.js" ]
    },
 
   "content_scripts": [ {
     "all_frames": true,
     "css": ["public/css/inPage.min.css"],
-    "js": ["public/js/utility.min.js", "public/js/selection.min.js"],
+    "js": ["public/js/utility.min.js",
+      "public/js/selection.min.js"],
     "matches": ["<all_urls>"]
       
   } ],
@@ -46,7 +58,17 @@
   },
 
   "commands": {
-    "_execute_browser_action": {
+
+    "open_option": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E",
+        "mac": "MacCtrl+Shift+E"
+      },
+
+      "description": "open the option page"
+    },
+
+    "_execute_page_action": {
       "suggested_key": {
         "default": "Ctrl+Shift+F",
         "mac": "MacCtrl+Shift+F"
